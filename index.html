@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<title>Lola Marsh Band</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -61,7 +61,7 @@ In February 2018 the band released a live session recorded at Capitol Records Lo
 <br/>
 <h3>My Playlist</h3>
 <br/>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wTQxiGJzR_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLSyP2-VkfUmI8IRTaXfs6XexAXNJgFxSR" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 
 <section id="like" class="section">
@@ -89,7 +89,7 @@ In February 2018 the band released a live session recorded at Capitol Records Lo
 <br/>
 <br/>
 <h3>Questions & Answers</h3>
-<br/>
+
 
 <h4 dir="rtl">1. פרט שלושה הבדלים עיקריים בין web1, web2 ו-web3: </h4>
 <p dir="rtl">
@@ -97,10 +97,12 @@ In February 2018 the band released a live session recorded at Capitol Records Lo
 א. ב-web1 האתרים לא היו דינאמיים אלא סטטיים, ובכל פעם שהיה צריך לעדכן את הדף היה צריך לעשות זאת פיזית. בעקבות זאת עדכונים נעשו פעם בהרבה זמן. 
 לעומת זאת, בweb2 וweb3 השתמשו ומשתמשים בטכנולוגיות שמאפשרות אתרים אינטרקטיביים. 
 <br/>
+<br/>
 ב. בweb1 אין מנועי חיפוש מכיוון שאין טכנולוגיה היודעת לבצע חיפוש. היו קיימים דפים בעלי מידע רב בהם היה צריך לחפש 
 את המידע באופן  ידני. בעקבות זאת, בשביל להגיע לאתר מסויים היה חייב לדעת את כתובת הURL שלו. 
 החל מ-web2 ניתן היה לשאול שאילתות באתרים, הוקמו מנועי חיפוש כמו גוגל, וניתן היה לקבל את כל המידע הנוגע לשאילתה אך לא בהכרח את התשובה עצמה. 
-בweb3 כבר ניתן לבצע חיפוש ולקבל חזרה מידע שעבר עיבוד כלשהו, כלומר התוצאות שנקבל הן הטובות ביותר הקיימות ברשת. 
+בweb3 כבר ניתן לבצע חיפוש ולקבל חזרה מידע שעבר עיבוד, כלומר התוצאות שנקבל הן הטובות ביותר הקיימות ברשת. 
+<br/>
 <br/>
 ג. בweb1 שפת התכנות היתה HTML בלבד, ולכן תכנתו רק בfrontend. בweb2 כבר עברו לתכנת גם בצד שרת וגם בצד לקוח. בתקופה זו היה כבר אפשר לפתח DB בצד שרת
 וניתן היה להירשם לאתרים ולשמור את הסיסמה שלהם בצד שרת, דבר הגרם לקשר יותר אינטרקטיבי עם הלקוח. בנוסף החל מweb2 משתמשים יכלו להקים אתרים בעצמם ולשתף ידע. 
@@ -136,45 +138,63 @@ In February 2018 the band released a live session recorded at Capitol Records Lo
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<h3>Contact Me</h3>
-<br/>
-<a href= "mailto:hillabe@post.bgu.ac.il">Send me a message by e-mail</a>
-<br/>
-<br/>
-<strong>or fill the next form:</strong>
-<br/>
-<FORM METHOD = "POST" ACTION = "/cgi-bin/formmail">
-  <p>
-    Mail: 
-  <input name="name" type="text" size="25">
-  </p>
-  <p>
-    Name: 
-    <input name="name" type="text" size="25">
-  </p>
-  <p>
-    Message: 
-  <textarea name="name" type="text area" size="30">
-  </textarea>
-  </p>
-  <p>
-  <div class="custom-select" style="width:200px;">
-    <select>
-    </select>
-  </div>
-  <input name="name" type="submit" size="20" value="submit">
-  <input name="name" type="reset" size="20" value="reset">
+  <h3>Contact Me</h3>
+  <strong>Contact me by send message here:</strong>
+  <br/>
+  <form action="mailto:hillabe@post.bgu.ac.il?subject=Subject&body=body" method="get" enctype="text/plain" autocomplete="on">
+     
+    Mail:
+    <input name="mail" type="email" placeholder="your mail here" required name="mail" >
+    <br/>
+    <br/>
+    Name:
 
+    <input id="name" name="name" type="text" placeholder="your name here" required name="name">
+    <br/>
+    <br/>
+    Subject:
 
-</p>
-<form method="POST" ></form>
-<br/>
-</section>
+    <input id="Subject" name="Subject"  placeholder="subject" required name="Subject" type="text" size="25">
+    <br/>
+    <br/>
+    Message:
+    <textarea id="message" name="body" placeholder="your message" required name="message" type="text area" rows="4" cols="30">
+    </textarea>
+    <br/>
 
+   Add an Emoji: 
+    <div  class="costume-select" style="width: 100%;">
+      <select name="emoji" style="height: 40px; width: 50px" onChange="addEmoji(value)">
+      <OPTION selected >😍
+      <option>😎
+      <option>🌈
+      <option>🌸
+      <option>🤩
+      <option>🤸
+      <option>☝🏼
+    <br/>
+    </select></div>
+    <br/>
+    <button type="submit" size="20" value="send"> submit</button>
+    <input type="reset" size="20" value="reset">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+  </form>
+  </section>
 
+  <script>
+function addEmoji(value){
+  document.getElementById("message").value += value; 
+}
+  </script>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 <script type="text/javascript">
 $(function(){
   $("#nav a").click(function(e){
