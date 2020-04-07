@@ -12,15 +12,13 @@
 	margin-bottom: 14px;
 	border: 1px solid #fff;
 	padding: 5px 5px;
-
-
 }
 
 a{
 	margin-left: 6px;
 	font-size: 12px;
 	font-weight: 550;
-	color: rgb(39, 39, 39);
+	color: rgb(245, 77, 77);
 	height: fit-content;
 	width: fit-content;
 	border-radius: 4px;
@@ -30,12 +28,13 @@ a{
 }
 
 body {
+	position: center; 
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	background-color:  rgb(255, 255, 255); 
 	justify-content:space-around;
 	list-style-type:none;
 	text-align: center;
-	background-image: url('skyback.jpeg');
+	background-image: url('LeafsBack.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
 	background-size: cover;
@@ -50,10 +49,14 @@ h1{
 }
 
 h3{
-	color: rgb(63, 73, 78);
+	color: rgb(49, 49, 49);
 	text-shadow: 1px 1px 3px #818181;
-	background: rgba(212, 212, 212, 0.4);
+	background: rgba(212, 212, 212, 0.7);
 	border-radius: 8px;
+}
+
+h4{
+	color:rgb(21, 31, 23);
 }
 
 img{
@@ -61,16 +64,32 @@ img{
 	box-shadow: 0 1px 3px 1px #b4b5b6;
 }
 
-p{
-	width: 95%;
-	text-align: center;
-	margin-left: 35px;
+img:hover{
+	box-shadow: 0px 2px 2px 2px #fdfdfd;	
+}
 
+p{
+	width: 75%;
+	margin-left: 130px;
+	background: rgba(82, 79, 79, 0.3);
+	border-radius: 8px;
+	padding: 20px 20px;
+	color: rgb(253, 250, 250);
+	text-shadow: 1px 1px 3px #818181;
+}
+
+.answer{
+	text-align: right;
 }
 
 iframe{
 	border-radius: 5px;
 	box-shadow: 0 1px 3px 1px #b4b5b6;
+}
+
+iframe:hover{
+	box-shadow: 0px 2px 2px 2px #fdfdfd;	
+
 }
 
 .fb-like{
